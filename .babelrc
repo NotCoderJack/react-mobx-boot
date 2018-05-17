@@ -1,32 +1,28 @@
 {
-  "presets": [
-    "latest",
-    "react",
-    "stage-0"
-  ],
-  "plugins": [
-    "transform-decorators-legacy",
-    "react-hot-loader/babel",
-    "transform-runtime",
-    [
-      "babel-plugin-root-import",
-      [
-        {
-          "rootPathPrefix": "~",
-          "rootPathSuffix": "src/components"
-        },
-        {
-          "rootPathPrefix": "@",
-          "rootPathSuffix": "src"
-        }
-      ]
+    "presets": [
+        "latest",
+        "react",
+        "stage-0"
     ],
-    [
-      "import",
-      {
-        "libraryName": "antd",
-        "style": true
-      }
+    "plugins": [
+        "transform-decorators-legacy",
+        "react-hot-loader/babel",
+        "transform-runtime", [
+            "babel-plugin-root-import", 
+            [{
+                "rootPathPrefix": "~",
+                "rootPathSuffix": "src/components"
+            },{
+                "rootPathPrefix": "@",
+                "rootPathSuffix": "src"
+            }]
+        ],
+        [
+            "import",
+            {
+                "libraryName": "antd",
+                "style": true
+            }
+        ]
     ]
-  ]
 }
