@@ -13,7 +13,7 @@
 ├── src/
 │   ├── components/     # 组件
 │   ├── config/         # 一些配置项
-│   ├── containers/     # 路由组件（页面维度）
+│   ├── routes/         # 路由组件（页面维度）
 │   ├── services/       # 数据接口
 │   ├── stores/         # 数据模型
 │   ├── utils/          # 工具
@@ -23,9 +23,9 @@
 ├── index.html
 ├── package.json
 ```
-在组件的设计上，应该明确`components`和`containers`目录中的组件职责：
+在组件的设计上，应该明确`components`和`routes`目录中的组件职责：
 - 尽量保持`components`中的为纯组件([PureComponent](https://facebook.github.io/react/docs/react-api.html#react.purecomponent))，一般来说它所需要的数据都来源于页面组件或者父组件传给它的`props`。
-- `containers`是页面维度的组件，它的职责是绑定相关联的`stores`数据，以数据容器的角色包含其它子组件。
+- `routes`是页面维度的组件，它的职责是绑定相关联的`stores`数据，以数据容器的角色包含其它子组件。
 
 接口服务都放在`services`中，供`stores`中的方法来调用。
 
